@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    
+
+
+<p>Write a JavaScript program to create a new string without the first and last character of a 
+    given string
+    </p>
+    <table border="1">
+
+        <tr >
+          <th>INPUT</th>
+           <th>OUTPUT</th>
+        </tr>
+    
+        <tr>
+            <td><p id="p1"></p></td>
+            <td><p id="p2"></p></td>
+    </table>
+
+<script>
+
+
+function withoutFirstAndEnd(str) {
+  return str.substring(1, str.length - 1);
+}
+
+const string = prompt('Enter a string: ');
+var str=string;
+const result=withoutFirstAndEnd(str);
+console.log(result);
+document.getElementById("p1").innerHTML=str;
+document.getElementById("p2").innerHTML=result;
+
+</script>
+
+</body>
+</html>

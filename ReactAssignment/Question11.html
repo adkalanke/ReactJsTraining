@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    
+
+
+<p>Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a 
+    given original string. The length of the given string must be 3 and above</p>
+    <table border="1">
+
+        <tr >
+          <th>INPUT</th>
+           <th>OUTPUT</th>
+        </tr>
+    
+        <tr>
+            <td><p id="p1"></p></td>
+            <td><p id="p2"></p></td>
+    </table>
+
+<script>
+
+function copyString(str)
+{
+  if (str.length >= 3) {
+    result_str = str.substring(str.length - 3);
+    return result_str + result_str + result_str + result_str;
+  }
+  else
+    return false;
+}
+
+const string = prompt('Enter a string: ');
+var str=string;
+const result=copyString(str);
+console.log(result);
+document.getElementById("p1").innerHTML=str;
+document.getElementById("p2").innerHTML=result;
+
+</script>
+
+</body>
+</html>

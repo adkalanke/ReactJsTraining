@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    
+
+
+<p>Write a JavaScript program to check if a given string contains equal number of p's and t's 
+    present.</p>
+    <table border="1">
+
+        <tr >
+          <th>INPUT</th>
+           <th>OUTPUT</th>
+        </tr>
+    
+        <tr>
+            <td><p id="p1"></p></td>
+            <td><p id="p2"></p></td>
+    </table>
+
+<script>
+
+
+function equalNumberOfpt(str)
+{ 
+  var str_p = str.replace(/[^p]/g, "");
+
+  var str_t = str.replace(/[^t]/g, "");
+
+  var p_num = str_p.length;
+  var s_num = str_t.length;
+
+  return p_num === s_num;
+         
+}
+
+const string = prompt('Enter a string: ');
+var str=string;
+const result=equalNumberOfpt(str);
+console.log(result);
+document.getElementById("p1").innerHTML=str;
+document.getElementById("p2").innerHTML=result;
+
+</script>
+
+</body>
+</html>

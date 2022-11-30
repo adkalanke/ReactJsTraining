@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    
+
+
+<p>Write a JavaScript program to replace every character in a given string with the character 
+    following it in the alphabet. </p>
+
+  <p id="p2">Input: </p>
+   <p id="p1">Output: </p>
+
+<script>
+
+
+function letterChanges(str) {
+    for (var i = 0; i < str.length; i++) {
+        if (96 < str.charCodeAt(i) && str.charCodeAt(i) < 123) {
+            str = str.replace(str.charAt(i), String.fromCharCode(str.charCodeAt(i) + 1));
+        }
+    }
+    return str;
+}
+
+const string = prompt('Enter a string: ');
+var str=string;
+const result=letterChanges(string );
+console.log(result);
+document.getElementById("p2").innerHTML=str;
+document.getElementById("p1").innerHTML=result;
+
+</script>
+
+</body>
+</html>
